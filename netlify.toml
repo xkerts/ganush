@@ -1,0 +1,12 @@
+[build]
+  command = "pnpm vite build"
+  publish = "dist/public"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA fallback: all routes serve index.html so client-side routing works
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
